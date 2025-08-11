@@ -1,7 +1,9 @@
 package com.teja.practice.leetcode;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 public class ContainsDuplicate {
     public static void main(String[] args) {
@@ -11,13 +13,14 @@ public class ContainsDuplicate {
     }
 
     public static boolean containsDuplicate(int[] nums) {
-       Map<Integer, Integer> map = new HashMap<>();
-       for(int num: nums){
-           if(map.containsKey(num)){
-               return true;
-           }
-           map.put(num, num);
-       }
-       return false;
+      Set<Integer> set = new HashSet<>();
+      for(int num: nums){
+        if(set.contains(num)){
+            return true;
+        }else{
+            set.add(num);
+        }
+      }
+      return false;
     }
 }
