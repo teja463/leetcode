@@ -32,7 +32,7 @@ public class GroupAnagrams {
   }
 
   private static List<List<String>> groupAnagrams2(String[] strs) {
-    Map<String, List<String>> map = new HashMap();
+    Map<String, List<String>> map = new HashMap<>();
 
     for (String str : strs) {
       char[] chars = str.toCharArray();
